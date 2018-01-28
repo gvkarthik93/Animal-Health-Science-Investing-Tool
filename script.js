@@ -10,11 +10,11 @@ var chart = new CanvasJS.Chart("chartContainer", {
     //innerRadius: 60,
     indexLabelFontSize: 17,
     indexLabel: "{label} - #percent%",
-    toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+    toolTipContent: "<b>{label}:</b> (#percent%)",
     dataPoints: [
-      { y: 67, label: "Labelled Green Bonds" },
-      { y: 28, label: "Unlabelled Green Bonds" },
-      { y: 10, label: "Animal Bonds" },
+      { y: 41, label: "Labelled Green Bonds" },
+      { y: 36, label: "Unlabelled Green Bonds" },
+      { y: 23, label: "Animal Bonds" },
     ]
   }]
 });
