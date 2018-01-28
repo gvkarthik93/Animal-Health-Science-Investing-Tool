@@ -1,34 +1,293 @@
-<html>
+
+<!DOCTYPE html><html class=''>
 <head>
-    <meta charset="utf-8"/>
-    <title>Chart.js demo</title>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+<style class="cp-pen-styles">@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:700,400,300,100|Montserrat:400,700);
+body {
+  color: #4E5A74;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 7em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.8em;
+    text-shadow: none;
+  }
+}
+
+h2 {
+  font-size: 3.3125em;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  line-height: 1.2;
+}
+
+p, ul {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  text-decoration: none;
+}
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 940px;
+  margin: 10px auto 80px;
+  padding: 0 3%;
+}
+
+.main-header {
+  color: #fff;
+  padding: 20% 3%;
+  background-image: -webkit-linear-gradient(rgba(19, 9, 51, 0.7), transparent 90%), -webkit-linear-gradient(-270deg, #fff, transparent 90%), url("images/main-background2.jpg");
+  background-image: linear-gradient(rgba(19, 9, 51, 0.7), transparent 90%), linear-gradient(0deg, #fff, transparent 90%), url("images/main-background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1024px) {
+  .main-header {
+    max-height: 850px;
+    padding-top: 204.8px;
+    padding-bottom: 204.8px;
+  }
+}
+@media (max-width: 768px) {
+  .main-header {
+    padding: 40% 3%;
+  }
+}
+.main-header .top {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 80px;
+}
+.main-header .top i {
+  display: block;
+  font-size: 3em;
+}
+.main-header .north {
+  display: block;
+  font-size: 0.33em;
+}
+
+.primary {
+  margin-bottom: 80px;
+}
+.primary .intro {
+  font-size: 1.5em;
+  font-weight: 100;
+  padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .primary .intro {
+    font-size: 1.2em;
+  }
+}
+
+.secondary ul, .secondary p {
+  text-align: left;
+}
+.secondary img {
+  width: 100%;
+  border-radius: 8px;
+}
+.secondary .turism {
+  width: 46.5%;
+  float: left;
+}
+@media (max-width: 768px) {
+  .secondary .turism {
+    float: none;
+    width: 100%;
+  }
+}
+.secondary .culture {
+  width: 46.5%;
+  float: right;
+}
+@media (max-width: 768px) {
+  .secondary .culture {
+    float: none;
+    width: 100%;
+  }
+}
+.secondary ul span {
+  color: #9ea8bd;
+  font-weight: 200;
+  padding-left: 1em;
+}
+
+.footer {
+  padding: 20px 0 50px;
+  border-bottom: 15px solid #130933;
+}
+
+.border {
+  display: block;
+  width: 20%;
+  margin: 0 auto 25px;
+  border-bottom: 2px solid;
+}
+
+.less-marging {
+  margin-top: -60px;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.mainpage_button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.mainpage_button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.button { transition: all .2s ease-in-out; }
+.button:hover { transform: scale(1.1);}
 
 
-</head>
-<body>
-<canvas id="doughnut-chart" width="800" height="450"></canvas>
 
-<script type="text/javascript">
+</style></head>
 
 
-new Chart(document.getElementById("doughnut-chart"), {
-    type: 'doughnut',
-    data: {
-      labels: ["Green Bonds", "Investments"],
-      datasets: [
-        {
-          backgroundColor: ["#46BFBD", "#F7464A"],
-          data: [200,800]
-        }
-      ]
-    },
-    options: {
-      title: {
-        display: true,
-      }
-    }
-});
+<body> 
+  <header id="top" class="main-header">
+    <div class="top">      
+      <i class="fa fa-map-marker"></i>
+    </div>
+    <h1>AGRO-BONDS<div class="north"></div></h1>
+    <h3>Impact investing Tool</h3>
+  </header>
+<!-- .primary -->
 
-</script>
+  <div class="border less-marging"></div>
+
+<!-- .primary -->
+  <div class="primary container">
+
+    <p class="intro">
+    Impact investing seeks to drive positive social or environmental impact alongside financial results.
+    </p>
+    <div class="container text-center">    
+        <div class="row">
+          <div class="col-sm-12">
+            <a href="investor.html"><button class="button mainpage_button">Investors</button></a>
+            <a href="farmer.html"><button class="button mainpage_button">Farmers</button></a>
+          </div>
+        </div>
+    </div>
+
+<!-- End .primary -->
+
+<!-- .secondary  -->
+  <div class="secondary container group"> 
+    <div class="turism" id="turism">
+      <img src="images/impact-investors.jpg" style="height: 150px; breadth: 150px;">
+      <h3>Investors</h3>
+      <p>
+        Invest in animal bonds thereby helping farmers take care of animals health.
+      </p>
+      <ul>
+        <li>Institutional Investors</li>
+        <li>Retail Investors</li>
+      </ul>   
+    </div>
+
+    <div class="culture" id="culture">
+      <img src="images/Bkgimg.jpg" alt="" style="height: 150px; breadth: 150px;">
+      <h3>Farmers</h3>
+      <p>To invest in animals and farming thereby achieving profits by selling agro products.
+      </p>
+      <ul>
+        <li>Cattle <span>(Cows and Grazing)</span></li>
+        <li>Meat<span>(Chicken, Pork and Beef)</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+<!-- End .secondary  -->
+
+  <div class="border"></div>
+
+<!-- .main-footer  -->
+  <footer class="main-footer">
+    <p>All rights reserved to AGRO-BONDS</p>
+  </footer>
+<!-- End .main-footer  -->
+
 </body>
+
+</body></html>

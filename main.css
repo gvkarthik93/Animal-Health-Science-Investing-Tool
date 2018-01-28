@@ -230,7 +230,7 @@ section {
 
 .costs {}
 
-a, a:hover, a:active, a:visited, a:focus {
+a {
     text-decoration:none;
     color: black;
 }
